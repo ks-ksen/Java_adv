@@ -23,21 +23,22 @@ public class Arr {
 
             int posMin = Integer.MAX_VALUE;
             int inOfMax = 0;
-            int min = mas[0];
+
+            int negMax = Integer.MIN_VALUE;
             int inOfMin = 0;
 
             for (int i = 0; i < mas.length; i++) {
 
-                if (mas[i] > 0 && mas[i] < posMin) {
+                if (mas [i] > 0 && mas[i] < posMin) {
                     posMin = mas[i];
                     inOfMax = i;
                 }
-                if (min > mas[i]) {
-                    min = mas[i];
+                if (mas [i] < 0 &&mas[i] > negMax){
+                    negMax = mas[i];
                     inOfMin = i;
                 }
             }
-            System.out.println("\nМинимальный положительный:  " + posMin + "\nМаксимальный отрицательный: " + min);
+            System.out.println("\nМинимальный положительный:  " + posMin + "\nМаксимальный отрицательный: " + negMax);
 
                 int el = mas[inOfMax];
                 mas[inOfMax] = mas[inOfMin];
