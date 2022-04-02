@@ -15,10 +15,10 @@ public class NewCalculator {
         int number2 = reader.nextInt();
         System.out.print("Введите оператор (+, -, *, /): ");
 
-        Plus plus = new Plus(number1,number2);
-        Minus minus = new Minus(number1,number2);
-        Multiplication multi = new Multiplication(number1,number2);
-        Division divi = new Division(number1,number2);
+        Data plus = new Data(number1,number2);
+        Data minus = new Data(number1,number2);
+        Data multi = new Data(number1,number2);
+        Data divi = new Data(number1,number2);
 
         char op = reader.next().charAt(0);
         switch (op) {

@@ -25,4 +25,20 @@ package task_four;
         this.number2 = number2;
     }
 
+     public double add (double number1, double number2){
+         return number1+number2;
+     }
+
+     public double subtract(double number1, double number2){
+         return number1-number2;
+     }
+
+     public double times(double number1, double number2){
+         return number1*number2;
+     }
+
+     public double div(double number1, double number2){
+         return number1/number2;
+     }
+
  }
