@@ -34,20 +34,20 @@ public class ExceptionsForNewCalculator {
                 break;
             case '/':
                if (number2==0){
-                   try {
                    throw new ArithmeticException("Деление на ноль.");
-                   }catch (ArithmeticException z){
-                       System.out.println("На 0 делить нельзя!");
-                   }
                }else System.out.println("Резултат: " + oper.div(number1,number2));
                 break;
 
-            default:
-                System.out.print("Некорректный оператор!");
+                default:
+                throw new UnsupportedOperationException ("Несуществующий оператор");
             }
 
         } catch (InputMismatchException c){
-            System.out.print("Используйте только цифры!");
+            System.out.print("Для ввода чисел используйте только цифры!");
+        } catch (ArithmeticException z) {
+            System.out.println("На 0 делить нельзя!");
+        }catch (UnsupportedOperationException p){
+            System.out.println("Некорректный оператор!");
         }
         reader.close();
     }
